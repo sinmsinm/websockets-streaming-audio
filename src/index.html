@@ -4,19 +4,19 @@
 <link href="common.css" rel="stylesheet" type="text/css">
 <!-- <input type="file" id="text_file_input" /> -->
 
-
+    <img src="img/cara-peum1.png" style="width: 100px" />
     <button onclick="location.reload();">r e l o a d</button>
     <!-- <button onclick="client_main.entry_point('stop_audio')">s t o p</button> -->
     <!-- <button onclick="client_main.entry_point('launch_stream_audio_loops')">stream loop</button> -->
     <!-- <button onclick="client_main.entry_point('launch_audio_browser_synthesized')">synth audio</button> -->
-    <!-- <button onclick="client_main.entry_point('launch_stream_audio')">stream audio</button> -->
+    <!-- <button onclick="client_main.entry_point('launch_stream_audio')">stream audio</button>-->
 
     <!-- <p> -->
     <!-- <br> -->
     <!-- <button onclick="client_entry.entry_point('stop_audio')">s t o p</button> -->
     <!-- <button onclick="client_entry.entry_point('launch_stream_audio')">stream audio</button> -->
 
-    <p>
+   <!-- <p>
     <br>
 
     <button onclick="client_entry.entry_point('stop_audio')">s t o p</button>
@@ -24,14 +24,15 @@
     <p>
     <br>
 
-    <!-- <button onclick="client_entry.entry_point('pause_audio')">p a u s e</button> -->
-    
+    <button onclick="client_entry.entry_point('pause_audio')">p a u s e</button>
+    -->
+    <button onclick="client_entry.entry_point('launch_stream_audio', 0)">Play PEUM episode</button>
     <!-- <button onclick="client_entry.entry_point('launch_stream_audio', 0)">stream 0</button> -->
     <!-- <button onclick="client_entry.entry_point('launch_stream_audio', 1)">stream 1</button> -->
-    <button onclick="client_entry.entry_point('launch_stream_audio', 2)">stream 2</button>
+    <!--button onclick="client_entry.entry_point('launch_stream_audio', 2)">stream 2</button> -->
     <!-- <button onclick="client_entry.entry_point('launch_stream_audio', 3)">stream 3</button> -->
     <!-- <button onclick="client_entry.entry_point('launch_stream_audio', 4)">stream 4</button> -->
-    <button onclick="client_entry.entry_point('launch_stream_audio', 5)">stream 5</button>
+    <!-- button onclick="client_entry.entry_point('launch_stream_audio', 5)">stream 5</button> -->
     <!-- <button onclick="client_entry.entry_point('launch_stream_audio', 6)">stream 6</button> -->
     <!-- <button onclick="client_entry.entry_point('launch_stream_audio', 7)">stream 7</button> -->
     <!-- <button onclick="client_entry.entry_point('launch_stream_audio', 8)">stream 8</button> -->
@@ -39,7 +40,7 @@
     <!-- <button onclick="client_entry.entry_point('launch_stream_audio', 10)">stream 10</button> -->
     <!-- <button onclick="client_entry.entry_point('launch_stream_audio', 11)">stream 11</button> -->
     <!-- <button onclick="client_entry.entry_point('launch_stream_audio', 12)">stream 12</button> -->
-    <button onclick="client_entry.entry_point('launch_stream_audio', 13)">stream 13</button>
+    <!-- button onclick="client_entry.entry_point('launch_stream_audio', 13)">stream 13</button> -->
     <!-- <button onclick="client_entry.entry_point('launch_stream_audio', 14)">stream 14</button> -->
     <!-- <button onclick="client_entry.entry_point('launch_stream_audio', 15)">stream 15</button> -->
     <!-- <button onclick="client_entry.entry_point('launch_stream_audio', 16)">stream 16</button> -->
@@ -49,7 +50,7 @@
 
 
 
-<pre id="result"></pre>
+<pre id="result" style="display:none"></pre>
 
 
 
@@ -77,6 +78,16 @@
   body {
     font-family: "Droid Sans", Arial, sans-serif;
     padding: 2em;
+  background: -webkit-gradient(linear, 0% 40%, 0% 70%, from(#20b2aa), to(#446877));
+  background: -webkit-linear-gradient(#20b2aa 40%, #446877 70%);
+  background: -moz-linear-gradient(#20b2aa 40%, #446877 70%);
+  background: -ms-linear-gradient(#20b2aa 40%, #446877 70%);
+  background: -o-linear-gradient(#20b2aa 40%, #446877 70%);
+  
+  background: linear-gradient(#20b2aa 40%, #446877 70%);
+
+
+
   }
   button {
     display: inline-block;
@@ -84,15 +95,7 @@
 
 
 
-  background: -webkit-gradient(linear, 0% 40%, 0% 70%, from(#F9F9F9), to(#E3E3E3));
-  background: -webkit-linear-gradient(#F9F9F9 40%, #E3E3E3 70%);
-  background: -moz-linear-gradient(#F9F9F9 40%, #E3E3E3 70%);
-  background: -ms-linear-gradient(#F9F9F9 40%, #E3E3E3 70%);
-  background: -o-linear-gradient(#F9F9F9 40%, #E3E3E3 70%);
   
-  background: linear-gradient(#F9F9F9 40%, #E3E3E3 70%);
-
-
 
   border: 1px solid #999;
   border-radius: 3px;
@@ -111,17 +114,7 @@
   }
   button:active {
   
-
-
-  background: -webkit-gradient(linear, 0% 40%, 0% 70%, from(#E3E3E3), to(#F9F9F9));
-  background: -webkit-linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
-  background: -moz-linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
-  background: -ms-linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
-  background: -o-linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
   
-  background: linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
-
-
 
   }
   section {
